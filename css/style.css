@@ -1,9 +1,11 @@
 :root{
     --galleryMargin:1rem;
+    --bgBody:#f2f3f4;
     --gridColumnCount: 5;
     --card-radius: .25rem;
     --card-padding: 1rem;
     --heading-text-color: #32325d;
+    --card-bg:#fff;
 }
 *,
 *::before,
@@ -12,8 +14,13 @@
 }
 body{
     margin: 0;
-    background: #f2f3f4;
+    background:var(--bgBody,#f2f3f4);
     font-family: 'Helvetica', Arial, sans-serif;
+}
+.dark--theme{
+    --bgBody:#32325d;
+    --card-bg: #3f3f78;
+    --heading-text-color: #fff;
 }
 @media screen and (max-width: 1199.98px){
     .gallery {
@@ -44,7 +51,7 @@ body{
     align-items: center;
 }
 .gallery__item{
-    background: #fff;
+    background: var(--card-bg,#fff);
     border-radius: var(--card-radius, .25rem);
     padding: var(--card-padding, 1rem);
 }
